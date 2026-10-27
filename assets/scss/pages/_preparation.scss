@@ -1,0 +1,180 @@
+.truth-page {
+  background: #211e1b;
+}
+
+.truth-section {
+  min-height: 70vh;
+}
+
+.truth-document {
+  padding: clamp(38px, 7vw, 76px);
+  color: #fff;
+  border: 1px solid #fff;
+  background: #0d0c0b;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .25);
+}
+
+.truth-document__header {
+  padding-bottom: 34px;
+  border-bottom: 2px solid #fff;
+}
+
+.truth-document__classification {
+  margin-bottom: 16px;
+  color: #d74b4b;
+  font-size: 14px;
+  letter-spacing: .08em;
+}
+
+.truth-document__title {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+
+.truth-document__section {
+  padding-block: 38px;
+  border-bottom: 1px solid rgba(255, 255, 255, .55);
+}
+
+.truth-document__section h2 {
+  margin-bottom: 24px;
+  color: #d74b4b;
+  font-size: clamp(20px, 3vw, 25px);
+  font-weight: 500;
+  letter-spacing: .08em;
+}
+
+.truth-document__summary > div,
+.truth-record > div {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, .55);
+}
+
+.truth-document__summary > div:last-child,
+.truth-record > div:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, .55);
+}
+
+.truth-document__summary dt,
+.truth-document__summary dd,
+.truth-record dt,
+.truth-record dd {
+  margin: 0;
+  padding: 15px 18px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.truth-document__summary dt,
+.truth-record dt {
+  border-right: 1px solid rgba(255, 255, 255, .55);
+  background: #211e1b;
+  font-weight: 500;
+}
+
+.truth-document__list {
+  display: grid;
+  gap: 13px;
+  padding-left: 1.4em;
+  list-style: disc;
+}
+
+.truth-document__list li::marker {
+  color: #d74b4b;
+}
+
+.truth-document__list li,
+.truth-document__paragraphs p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.truth-document__paragraphs {
+  display: grid;
+  gap: 17px;
+}
+
+.truth-document__priority {
+  padding: 18px 20px;
+  color: #fff;
+  border-left: 3px solid #d74b4b;
+  background: #211e1b;
+  font-weight: 500;
+}
+
+.truth-document__section--record {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.truth-record dd:not(.truth-record__status)::after {
+  display: block;
+  height: 1.7em;
+  border-bottom: 1px solid rgba(255, 255, 255, .65);
+  content: "";
+}
+
+.truth-record__status {
+  color: #d74b4b;
+  letter-spacing: .08em;
+}
+
+.truth-ending {
+  margin-top: clamp(64px, 9vw, 100px);
+  padding-top: clamp(42px, 6vw, 64px);
+  color: #f4f0e9;
+  border-top: 1px solid rgba(255, 255, 255, .26);
+  text-align: center;
+}
+
+.truth-ending__label {
+  color: #b9aea4;
+  font-size: 14px;
+  letter-spacing: .28em;
+}
+
+.truth-ending__title {
+  margin-top: 16px;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 500;
+  letter-spacing: .1em;
+}
+
+.truth-ending__share.button {
+  min-width: 210px;
+  margin-top: 32px;
+  color: #211e1b;
+  border-color: #f4f0e9;
+  background: #f4f0e9;
+}
+
+.truth-ending__share.button:hover {
+  color: #fff;
+  border-color: #8b6759;
+  background: #8b6759;
+}
+
+@media (max-width: 600px) {
+  .truth-document {
+    padding: 32px 22px;
+  }
+
+  .truth-document__summary > div,
+  .truth-record > div {
+    display: block;
+  }
+
+  .truth-document__summary dt,
+  .truth-record dt {
+    padding-bottom: 8px;
+    border-right: 0;
+  }
+
+  .truth-document__summary dd,
+  .truth-record dd {
+    padding-top: 10px;
+  }
+}

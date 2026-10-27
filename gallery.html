@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="完全予約制のフレンチレストラン L'ORNEVIER">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>L'ORNEVIERのひととき｜L'ORNEVIER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&amp;family=Tangerine:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261027-8">
+  <link rel="stylesheet" href="modules/site-alteration/site-alteration.css">
+  <script src="modules/site-alteration/site-alteration.js" defer></script>
+  <script src="modules/site-alteration/debug-panel.js" defer></script>
+  <script src="assets/js/arg/game-state.js?v=20261027-3" defer></script>
+  <script src="assets/js/common.js?v=20261027-1" defer></script>
+  <script src="assets/js/arg/gallery.js?v=20261027-3" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+        <img src="images/logo-main.webp" width="2172" height="724" alt="L'ORNEVIER">
+      </a>
+      <nav class="site-header__nav" id="global-navigation" data-global-nav aria-label="メインナビゲーション">
+        <ul class="site-header__nav-list">
+            <li><a class="site-header__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-header__nav-link" href="chef.html">シェフ紹介</a></li>
+            <li><a class="site-header__nav-link" href="menu.html">コースメニュー</a></li>
+            <li><a class="site-header__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-header__nav-link" href="gallery.html" aria-current="page">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-header__nav-link" href="reservation.html">ご予約・アクセス</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <button class="button button--secondary site-header__reset" type="button" data-reset-open>探索リセット</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-navigation" aria-label="メニューを開く" data-menu-toggle>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="site-main" id="main-content">
+    <section class="section section--large page-intro">
+      <div class="container container--readable">
+        <p class="en-heading" lang="en">Moments</p>
+        <h1 class="page-intro__title">L'ORNEVIERのひととき</h1>
+        <p class="page-intro__text">大切な方と過ごすひとときもまた、かけがえのない記憶になると考えています。</p>
+      </div>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-heading section-heading--center container--readable">
+          <p class="section-kicker" lang="en">Photo Gallery</p>
+          <h2 class="section-title" id="gallery-title">食卓を囲む時間</h2>
+          <p>ご家族との語らい、記念日の一席、友人との再会。L'ORNEVIERで生まれた穏やかな時間をご紹介します。</p>
+        </div>
+        <div class="gallery-grid" data-gallery-anomaly-region>
+          <figure class="gallery-item gallery-item--family gallery-item--large" data-gallery-family>
+            <img src="images/gallery-family-normal.webp" width="1536" height="1024" alt="家族で料理を囲み会話を楽しむ様子" loading="lazy">
+            <figcaption>ご家族で囲む食卓</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--celebration gallery-item--tall">
+            <img src="images/gallery-celebration.webp" width="1536" height="1024" alt="花束とデザートで記念日を祝う様子" loading="lazy">
+            <figcaption>大切な記念日に</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--couple" data-gallery-couple>
+            <img src="images/gallery-couple-normal.webp" width="1672" height="941" alt="夫婦で料理と会話を楽しむ様子" loading="lazy">
+            <figcaption>お二人で過ごす時間</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--friends">
+            <img src="images/gallery-friends.webp" width="1672" height="941" alt="友人同士で食事を楽しむ二人" loading="lazy">
+            <figcaption>友人との再会</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--dining gallery-item--wide">
+            <img src="images/gallery-dining.webp" width="1672" height="941" alt="向かい合って料理を楽しむ二人" loading="lazy">
+            <figcaption>会話が弾む一席</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reservation-cta" aria-labelledby="gallery-reservation-title">
+      <div class="container container--readable reservation-cta__inner">
+        <p class="en-heading" lang="en">Reservation</p>
+        <h2 class="section-title" id="gallery-reservation-title">大切な方とのひとときを</h2>
+        <p>季節の料理と穏やかな空間で、心に残る時間をお過ごしください。</p>
+        <a class="button button--primary" href="reservation.html">ご予約・アクセスへ</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+          <img src="images/logo-white.webp" width="2172" height="724" alt="L'ORNEVIER">
+        </a>
+        <nav aria-label="フッターナビゲーション">
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="index.html">TOP</a></li>
+            <li><a class="site-footer__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-footer__nav-link" href="chef.html">シェフ紹介</a></li>
+            <li><a class="site-footer__nav-link" href="menu.html">コースメニュー</a></li>
+            <li><a class="site-footer__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-footer__nav-link" href="gallery.html" aria-current="page">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-footer__nav-link" href="reservation.html">ご予約・アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__notice">※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係ありません。</p>
+        <p class="site-footer__copyright">©ぺいぽぴー</p>
+      </div>
+    </div>
+  </footer>
+  <dialog class="arg-dialog arg-dialog--photo" id="gallery-photo-dialog" data-gallery-photo-dialog aria-labelledby="gallery-photo-dialog-title">
+    <div class="arg-dialog__inner">
+      <button class="arg-dialog__close" type="button" data-arg-dialog-close aria-label="写真詳細を閉じる">×</button>
+      <img class="arg-dialog__image" data-gallery-dialog-image src="images/gallery-family-abnormal.webp" width="1536" height="1024" alt="">
+      <div class="gallery-photo-note">
+        <p class="arg-dialog__eyebrow">掲載写真・編集情報</p>
+        <h2 class="arg-dialog__title" id="gallery-photo-dialog-title" data-gallery-dialog-title>ご家族で囲む食卓</h2>
+        <div data-gallery-dialog-details></div>
+      </div>
+    </div>
+  </dialog>
+  <dialog class="reset-dialog" data-reset-dialog aria-labelledby="reset-dialog-title">
+    <div class="reset-dialog__inner">
+      <h2 class="reset-dialog__title" id="reset-dialog-title">探索をリセットしますか？</h2>
+      <p class="reset-dialog__text">これまでの探索状況は失われ、最初からの開始となります。</p>
+      <div class="reset-dialog__actions">
+        <button class="button button--secondary" type="button" data-reset-cancel>キャンセル</button>
+        <button class="button button--primary" type="button" data-reset-confirm>リセットする</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

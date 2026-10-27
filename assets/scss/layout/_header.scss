@@ -1,0 +1,224 @@
+.site-header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  min-height: var(--header-height);
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, .97);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  min-height: var(--header-height);
+  gap: clamp(14px, 1.5vw, 24px);
+}
+
+.site-header__logo {
+  flex: 0 0 auto;
+  width: clamp(160px, 14vw, 200px);
+}
+
+.site-header__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.site-header__nav {
+  margin-left: auto;
+}
+
+.site-header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(10px, 1vw, 18px);
+}
+
+.site-header__nav-link {
+  position: relative;
+  display: block;
+  padding-block: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header__nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  left: 0;
+  height: 1px;
+  background: var(--color-accent);
+  content: "";
+  opacity: 0;
+  transform: scaleX(.5);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.site-header__nav-link:hover::after,
+.site-header__nav-link[aria-current="page"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-header__reset.button {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 5px 10px;
+  font-size: 11px;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.menu-toggle__line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-block: 5px;
+  background: currentColor;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.is-menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 1080px) {
+  .site-header__inner {
+    gap: 18px;
+  }
+
+  .site-header__logo {
+    width: 176px;
+  }
+
+  .site-header__nav-list {
+    gap: 13px;
+  }
+
+  .site-header__nav-link,
+  .site-header__reset {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .site-header__inner {
+    justify-content: space-between;
+  }
+
+  .site-header__logo {
+    width: clamp(146px, 27vw, 190px);
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-header__nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    border-bottom: 0 solid var(--color-border);
+    background: var(--color-surface);
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 280ms ease, opacity var(--transition), visibility var(--transition), border-width var(--transition);
+  }
+
+  .site-header__nav.is-open {
+    max-height: calc(100dvh - var(--header-height));
+    overflow-y: auto;
+    border-bottom-width: 1px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .site-header__nav-list {
+    display: block;
+    padding: 20px var(--gutter) 28px;
+  }
+
+  .site-header__nav-link {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--color-ivory);
+    font-size: 15px;
+  }
+
+  .site-header__nav-link::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-header__reset.button {
+    min-height: 32px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header__inner {
+    gap: 8px;
+  }
+
+  .site-header__logo {
+    width: 132px;
+  }
+
+  .site-header__actions {
+    gap: 6px;
+  }
+
+  .site-header__reset.button {
+    min-height: 30px;
+    padding-inline: 6px;
+    font-size: 9px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+}

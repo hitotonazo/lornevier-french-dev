@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+docs/
+assets/scss/*.css
+assets/scss/*.css.map
+
+# Original image exports; the site uses the optimized WebP versions.
+images/*.png
+!images/favicon.png

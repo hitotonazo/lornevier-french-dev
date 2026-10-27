@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="完全予約制のフレンチレストラン L'ORNEVIER">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>ご予約・アクセス｜L'ORNEVIER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&amp;family=Tangerine:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261027-8">
+  <link rel="stylesheet" href="modules/site-alteration/site-alteration.css">
+  <script src="modules/site-alteration/site-alteration.js" defer></script>
+  <script src="modules/site-alteration/debug-panel.js" defer></script>
+  <script src="assets/js/arg/game-state.js?v=20261027-3" defer></script>
+  <script src="assets/js/common.js?v=20261027-1" defer></script>
+  <script src="assets/js/arg/reservation.js?v=20261027-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+        <img src="images/logo-main.webp" width="2172" height="724" alt="L'ORNEVIER">
+      </a>
+      <nav class="site-header__nav" id="global-navigation" data-global-nav aria-label="メインナビゲーション">
+        <ul class="site-header__nav-list">
+            <li><a class="site-header__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-header__nav-link" href="chef.html">シェフ紹介</a></li>
+            <li><a class="site-header__nav-link" href="menu.html">コースメニュー</a></li>
+            <li><a class="site-header__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-header__nav-link" href="gallery.html">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-header__nav-link" href="reservation.html" aria-current="page">ご予約・アクセス</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <button class="button button--secondary site-header__reset" type="button" data-reset-open>探索リセット</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-navigation" aria-label="メニューを開く" data-menu-toggle>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="site-main" id="main-content">
+    <section class="section section--large page-intro">
+      <div class="container container--readable">
+        <p class="en-heading" lang="en">Reservation</p>
+        <h1 class="page-intro__title">ご予約・アクセス</h1>
+        <p class="page-intro__text">完全予約制にて、皆様をお迎えしています。</p>
+      </div>
+    </section>
+
+    <section class="section reservation-guide" aria-labelledby="reservation-guide-title">
+      <div class="container container--readable reservation-guide__inner">
+        <p class="section-kicker" lang="en">Reservation</p>
+        <h2 class="section-title" id="reservation-guide-title">ご予約について</h2>
+        <p>L'ORNEVIERでは、一席ごとの時間を大切にするため完全予約制でご案内しています。</p>
+        <p>現在、このWebサイトからの予約受付や個人情報の入力は行っていません。ご予約方法の詳細は、正式なご案内時にお知らせします。</p>
+        <p class="reservation-guide__note">※本サイトは架空のレストランを題材としたフィクションです。実際の予約はできません。</p>
+      </div>
+    </section>
+
+    <section class="section info-section" aria-labelledby="business-title">
+      <div class="container info-section__inner">
+        <div class="info-section__heading">
+          <p class="section-kicker" lang="en">Information</p>
+          <h2 class="section-title" id="business-title">営業案内</h2>
+        </div>
+        <dl class="info-list">
+          <dt>営業形態</dt><dd>完全予約制</dd>
+          <dt>営業日時</dt><dd>ご予約案内時にお知らせします</dd>
+          <dt>コース</dt><dd>季節のコースをご用意します</dd>
+          <dt>ご案内</dt><dd>食材の入荷状況により内容が変わる場合があります</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section access-section" aria-labelledby="access-title">
+      <div class="container access-section__inner">
+        <figure class="access-section__media">
+          <img src="images/mv-restaurant.webp" width="1672" height="941" alt="L'ORNEVIERのエントランス" loading="lazy">
+        </figure>
+        <div class="access-section__body">
+          <p class="section-kicker" lang="en">Access</p>
+          <h2 class="section-title" id="access-title">アクセス</h2>
+          <p>所在地の詳細およびご来店方法は、ご予約のご案内時にお知らせします。</p>
+          <p>本サイトには実在する住所、電話番号、地図情報を掲載していません。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--large reservation-notice" aria-labelledby="reservation-notice-title" data-reservation-notice>
+      <div class="container container--readable">
+        <div class="reservation-notice__heading">
+          <p class="section-kicker" lang="en">Notice</p>
+          <h2 class="section-title" id="reservation-notice-title">お知らせ・予約関連情報</h2>
+        </div>
+        <div class="reservation-notice__content">
+          <p>ご予約に関する最新のご案内は、こちらでお知らせします。</p>
+          <p class="reservation-notice__empty" data-reservation-empty>現在、新しいお知らせはありません。</p>
+          <p class="reservation-notice__internal" data-preparation-reference hidden>
+            <span>業務用下書き</span>
+            <a href="preparation.html">特別コース提供準備メモ</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+          <img src="images/logo-white.webp" width="2172" height="724" alt="L'ORNEVIER">
+        </a>
+        <nav aria-label="フッターナビゲーション">
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="index.html">TOP</a></li>
+            <li><a class="site-footer__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-footer__nav-link" href="chef.html">シェフ紹介</a></li>
+            <li><a class="site-footer__nav-link" href="menu.html">コースメニュー</a></li>
+            <li><a class="site-footer__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-footer__nav-link" href="gallery.html">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-footer__nav-link" href="reservation.html" aria-current="page">ご予約・アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__notice">※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係ありません。</p>
+        <p class="site-footer__copyright">©ぺいぽぴー</p>
+      </div>
+    </div>
+  </footer>
+  <dialog class="reset-dialog" data-reset-dialog aria-labelledby="reset-dialog-title">
+    <div class="reset-dialog__inner">
+      <h2 class="reset-dialog__title" id="reset-dialog-title">探索をリセットしますか？</h2>
+      <p class="reset-dialog__text">これまでの探索状況は失われ、最初からの開始となります。</p>
+      <div class="reset-dialog__actions">
+        <button class="button button--secondary" type="button" data-reset-cancel>キャンセル</button>
+        <button class="button button--primary" type="button" data-reset-confirm>リセットする</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

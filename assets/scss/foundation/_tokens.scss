@@ -1,0 +1,32 @@
+:root {
+  --color-bg: #faf9f6;
+  --color-surface: #fff;
+  --color-ivory: #e9e5de;
+  --color-ink: #292724;
+  --color-muted: #75685f;
+  --color-accent: #8b6759;
+  --color-accent-dark: #69483c;
+  --color-border: #d9d1c8;
+  --color-footer: #392f2a;
+  --font-body: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --font-display: "Tangerine", cursive;
+  --container: 1200px;
+  --container-readable: 880px;
+  --gutter: 40px;
+  --space-section-lg: 120px;
+  --space-section-md: 96px;
+  --space-section-sm: 64px;
+  --header-height: 104px;
+  --radius: 2px;
+  --transition: 180ms ease;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 20px;
+    --space-section-lg: 72px;
+    --space-section-md: 64px;
+    --space-section-sm: 48px;
+    --header-height: 74px;
+  }
+}

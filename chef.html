@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="完全予約制のフレンチレストラン L'ORNEVIER">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>シェフ紹介｜L'ORNEVIER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&amp;family=Tangerine:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261027-8">
+  <link rel="stylesheet" href="modules/site-alteration/site-alteration.css">
+  <script src="modules/site-alteration/site-alteration.js" defer></script>
+  <script src="modules/site-alteration/debug-panel.js" defer></script>
+  <script src="assets/js/arg/game-state.js?v=20261027-3" defer></script>
+  <script src="assets/js/common.js?v=20261027-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+        <img src="images/logo-main.webp" width="2172" height="724" alt="L'ORNEVIER">
+      </a>
+      <nav class="site-header__nav" id="global-navigation" data-global-nav aria-label="メインナビゲーション">
+        <ul class="site-header__nav-list">
+            <li><a class="site-header__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-header__nav-link" href="chef.html" aria-current="page">シェフ紹介</a></li>
+            <li><a class="site-header__nav-link" href="menu.html">コースメニュー</a></li>
+            <li><a class="site-header__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-header__nav-link" href="gallery.html">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-header__nav-link" href="reservation.html">ご予約・アクセス</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <button class="button button--secondary site-header__reset" type="button" data-reset-open>探索リセット</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-navigation" aria-label="メニューを開く" data-menu-toggle>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="site-main" id="main-content">
+    <section class="section section--large page-intro">
+      <div class="container container--readable">
+        <p class="en-heading" lang="en">Chef</p>
+        <h1 class="page-intro__title">シェフ紹介</h1>
+        <p class="page-intro__text">ひと皿に向き合う、L'ORNEVIERの料理人をご紹介します。</p>
+      </div>
+    </section>
+
+    <section class="section chef-profile" aria-labelledby="chef-name">
+      <div class="container chef-profile__inner">
+        <figure class="chef-profile__portrait">
+          <img src="images/chef-portrait.webp" width="1536" height="1024" alt="L'ORNEVIER シェフ 榊玻璃玲司" loading="lazy">
+        </figure>
+        <div class="chef-profile__body">
+          <p class="section-kicker" lang="en">Reiji Sakakihari</p>
+          <h2 class="chef-profile__name" id="chef-name"><span>シェフ</span>榊玻璃 玲司</h2>
+          <p class="chef-profile__reading">さかきはり れいじ</p>
+          <p>季節の移ろいと食材の声に耳を澄ませ、その日にふさわしい味わいを一皿へ映すことを大切にしています。</p>
+          <p>食べる方の時間に静かに寄り添い、料理を囲んだ記憶まで豊かにすること。それが、L'ORNEVIERの料理の原点です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--large chef-philosophy" aria-labelledby="chef-philosophy-title">
+      <div class="container chef-philosophy__inner">
+        <div class="chef-philosophy__body">
+          <p class="section-kicker" lang="en">Philosophy</p>
+          <h2 class="section-title" id="chef-philosophy-title">食事を終えた後にも、<br>記憶に残るひと皿を</h2>
+          <p>味だけではなく、その時間がもたらす喜びを大切にしています。香りや温度、食感の重なりを丁寧に整え、ひと口ごとに季節を感じられる料理を目指します。</p>
+          <p>大切な方と交わした言葉まで、幸福な記憶として残っていくように。目の前の一皿へ、静かに心を尽くします。</p>
+        </div>
+        <figure class="chef-philosophy__media">
+          <img src="images/chef-kitchen.webp" width="1536" height="1024" alt="厨房で料理を仕上げる榊玻璃玲司" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section reservation-cta" aria-labelledby="chef-course-title">
+      <div class="container container--readable reservation-cta__inner">
+        <p class="en-heading" lang="en">Course</p>
+        <h2 class="section-title" id="chef-course-title">季節のコース</h2>
+        <p>シェフの料理観を、季節の移ろいとともに一つのコースでお楽しみください。</p>
+        <a class="button button--primary" href="menu.html">コースメニューへ</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+          <img src="images/logo-white.webp" width="2172" height="724" alt="L'ORNEVIER">
+        </a>
+        <nav aria-label="フッターナビゲーション">
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="index.html">TOP</a></li>
+            <li><a class="site-footer__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-footer__nav-link" href="chef.html" aria-current="page">シェフ紹介</a></li>
+            <li><a class="site-footer__nav-link" href="menu.html">コースメニュー</a></li>
+            <li><a class="site-footer__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-footer__nav-link" href="gallery.html">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-footer__nav-link" href="reservation.html">ご予約・アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__notice">※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係ありません。</p>
+        <p class="site-footer__copyright">©ぺいぽぴー</p>
+      </div>
+    </div>
+  </footer>
+  <dialog class="reset-dialog" data-reset-dialog aria-labelledby="reset-dialog-title">
+    <div class="reset-dialog__inner">
+      <h2 class="reset-dialog__title" id="reset-dialog-title">探索をリセットしますか？</h2>
+      <p class="reset-dialog__text">これまでの探索状況は失われ、最初からの開始となります。</p>
+      <div class="reset-dialog__actions">
+        <button class="button button--secondary" type="button" data-reset-cancel>キャンセル</button>
+        <button class="button button--primary" type="button" data-reset-confirm>リセットする</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

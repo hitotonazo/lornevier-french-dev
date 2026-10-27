@@ -1,0 +1,81 @@
+.gallery-section {
+  background: var(--color-surface);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px 24px;
+  align-items: start;
+}
+
+.gallery-item {
+  grid-column: span 5;
+}
+
+.gallery-item--large {
+  grid-column: span 7;
+}
+
+.gallery-item--wide {
+  grid-column: 2 / span 10;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-item--large img,
+.gallery-item--wide img {
+  aspect-ratio: 16 / 10;
+}
+
+.gallery-item--tall {
+  margin-top: 72px;
+}
+
+.gallery-item--tall img {
+  aspect-ratio: 4 / 5;
+  object-position: center center;
+}
+
+.gallery-item--family img {
+  object-position: center center;
+}
+
+.gallery-item--couple img,
+.gallery-item--friends img,
+.gallery-item--dining img {
+  object-position: center center;
+}
+
+.gallery-item figcaption {
+  margin-top: 13px;
+  color: var(--color-muted);
+  font-size: 14px;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 767px) {
+  .gallery-grid {
+    display: block;
+  }
+
+  .gallery-item,
+  .gallery-item--tall {
+    margin-top: 30px;
+  }
+
+  .gallery-item:first-child {
+    margin-top: 0;
+  }
+
+  .gallery-item img,
+  .gallery-item--large img,
+  .gallery-item--wide img,
+  .gallery-item--tall img {
+    aspect-ratio: 4 / 3;
+  }
+}

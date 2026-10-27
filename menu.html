@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="完全予約制のフレンチレストラン L'ORNEVIER">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>コースメニュー｜L'ORNEVIER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&amp;family=Tangerine:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261027-8">
+  <link rel="stylesheet" href="modules/site-alteration/site-alteration.css">
+  <script src="modules/site-alteration/site-alteration.js" defer></script>
+  <script src="modules/site-alteration/debug-panel.js" defer></script>
+  <script src="assets/js/arg/game-state.js?v=20261027-3" defer></script>
+  <script src="assets/js/common.js?v=20261027-1" defer></script>
+  <script src="assets/js/arg/menu.js?v=20261027-3" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+        <img src="images/logo-main.webp" width="2172" height="724" alt="L'ORNEVIER">
+      </a>
+      <nav class="site-header__nav" id="global-navigation" data-global-nav aria-label="メインナビゲーション">
+        <ul class="site-header__nav-list">
+            <li><a class="site-header__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-header__nav-link" href="chef.html">シェフ紹介</a></li>
+            <li><a class="site-header__nav-link" href="menu.html" aria-current="page">コースメニュー</a></li>
+            <li><a class="site-header__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-header__nav-link" href="gallery.html">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-header__nav-link" href="reservation.html">ご予約・アクセス</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <button class="button button--secondary site-header__reset" type="button" data-reset-open>探索リセット</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-navigation" aria-label="メニューを開く" data-menu-toggle>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="site-main" id="main-content">
+    <section class="section section--large page-intro">
+      <div class="container container--readable">
+        <p class="en-heading" lang="en">Menu</p>
+        <h1 class="page-intro__title">コースメニュー</h1>
+        <p class="page-intro__text">季節の恵みを映したコースをご用意しています。</p>
+      </div>
+    </section>
+
+    <section class="section seasonal-course" aria-labelledby="seasonal-title">
+      <div class="container container--readable section-heading section-heading--center">
+        <p class="section-kicker" lang="en">Seasonal Course</p>
+        <h2 class="section-title" id="seasonal-title">季節のコース</h2>
+        <p>旬を迎えた食材の個性を生かし、前菜、メイン、デザートへと穏やかに余韻がつながるコースに仕立てます。</p>
+      </div>
+      <div class="container course-list">
+        <article class="course-item">
+          <figure class="course-item__media"><img src="images/course-appetizer.webp" width="1536" height="1024" alt="魚介と季節の野菜を合わせた前菜" loading="lazy"></figure>
+          <div class="course-item__body">
+            <p class="course-item__number">01</p>
+            <p class="section-kicker" lang="en">Appetizer</p>
+            <h3>季節の前菜</h3>
+            <p>瑞々しい野菜と魚介の繊細な味わいを重ね、コースの始まりを軽やかに彩ります。</p>
+          </div>
+        </article>
+        <article class="course-item course-item--reverse">
+          <figure class="course-item__media"><img src="images/course-main.webp" width="1536" height="1024" alt="肉料理と季節野菜のメインディッシュ" loading="lazy"></figure>
+          <div class="course-item__body">
+            <p class="course-item__number">02</p>
+            <p class="section-kicker" lang="en">Main Dish</p>
+            <h3>季節のメインディッシュ</h3>
+            <p>素材の持つ力強さを引き出しながら、香りとソースの調和を丁寧に組み立てた一皿です。</p>
+          </div>
+        </article>
+        <article class="course-item">
+          <figure class="course-item__media"><img src="images/course-dessert.webp" width="1536" height="1024" alt="苺を使った華やかなデザート" loading="lazy"></figure>
+          <div class="course-item__body">
+            <p class="course-item__number">03</p>
+            <p class="section-kicker" lang="en">Dessert</p>
+            <h3>季節のデザート</h3>
+            <p>果実の香りと穏やかな甘さが広がる、食事の余韻を結ぶデザートをご用意します。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--large past-course" aria-labelledby="past-course-title">
+      <div class="container past-course__inner">
+        <figure class="past-course__media" data-spring-course-image>
+          <img src="images/course-spring-normal.webp" width="1536" height="1024" alt="仔羊のローストと春野菜を盛り合わせた料理" loading="lazy">
+        </figure>
+        <div class="past-course__body">
+          <p class="section-kicker" lang="en">Past Course</p>
+          <h2 class="section-title" id="past-course-title">2026年春の特別コース</h2>
+          <p>やわらかな仔羊のローストに、アスパラガスや豆などの春野菜を添えた季節の一皿。素材の香りをつなぐ繊細なソースとともにご提供しました。</p>
+          <p class="past-course__note">過去にご提供したコースの一例です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reservation-cta" aria-labelledby="menu-reservation-title">
+      <div class="container container--readable reservation-cta__inner">
+        <p class="en-heading" lang="en">Reservation</p>
+        <h2 class="section-title" id="menu-reservation-title">ご予約について</h2>
+        <p>コース内容は季節や食材の入荷状況に合わせてご用意します。</p>
+        <a class="button button--primary" href="reservation.html">ご予約・アクセスへ</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__logo" href="index.html" aria-label="L'ORNEVIER TOPへ">
+          <img src="images/logo-white.webp" width="2172" height="724" alt="L'ORNEVIER">
+        </a>
+        <nav aria-label="フッターナビゲーション">
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="index.html">TOP</a></li>
+            <li><a class="site-footer__nav-link" href="about.html">L'ORNEVIERについて</a></li>
+            <li><a class="site-footer__nav-link" href="chef.html">シェフ紹介</a></li>
+            <li><a class="site-footer__nav-link" href="menu.html" aria-current="page">コースメニュー</a></li>
+            <li><a class="site-footer__nav-link" href="reviews.html">お客様の声</a></li>
+            <li><a class="site-footer__nav-link" href="gallery.html">L'ORNEVIERのひととき</a></li>
+            <li><a class="site-footer__nav-link" href="reservation.html">ご予約・アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__notice">※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係ありません。</p>
+        <p class="site-footer__copyright">©ぺいぽぴー</p>
+      </div>
+    </div>
+  </footer>
+  <dialog class="arg-dialog arg-dialog--photo" id="spring-course-dialog" data-spring-course-dialog aria-labelledby="spring-course-dialog-title">
+    <div class="arg-dialog__inner">
+      <button class="arg-dialog__close" type="button" data-arg-dialog-close aria-label="写真と厨房メモを閉じる">×</button>
+      <img class="arg-dialog__image" src="images/course-spring-abnormal.webp" width="1536" height="1024" alt="E-7と記されたソース容器と、厨房で撮影された仔羊料理の試作写真" loading="lazy">
+      <div class="kitchen-note">
+        <p class="kitchen-note__label">厨房用・試食メモ</p>
+        <h2 class="arg-dialog__title" id="spring-course-dialog-title">春の特別コース／試作ソース E-7</h2>
+        <p>試食後の反応、通常の皿と比較にならない。</p>
+        <p>再提供希望の電話が続く。次回提供はシェフ確認。</p>
+        <p><strong>記念日の二名様について、掲載写真の差し替え依頼あり。フロア担当に要確認。</strong></p>
+      </div>
+    </div>
+  </dialog>
+  <dialog class="reset-dialog" data-reset-dialog aria-labelledby="reset-dialog-title">
+    <div class="reset-dialog__inner">
+      <h2 class="reset-dialog__title" id="reset-dialog-title">探索をリセットしますか？</h2>
+      <p class="reset-dialog__text">これまでの探索状況は失われ、最初からの開始となります。</p>
+      <div class="reset-dialog__actions">
+        <button class="button button--secondary" type="button" data-reset-cancel>キャンセル</button>
+        <button class="button button--primary" type="button" data-reset-confirm>リセットする</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

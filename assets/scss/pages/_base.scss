@@ -1,0 +1,132 @@
+.site-main {
+  min-height: 54vh;
+  background: var(--color-bg);
+}
+
+.section-title {
+  font-size: clamp(24px, 3.6vw, 36px);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: .09em;
+}
+
+.section-kicker {
+  margin-bottom: 13px;
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: .025em;
+}
+
+.section-heading {
+  margin-bottom: 56px;
+}
+
+.section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading .section-title + p {
+  margin-top: 22px;
+  color: var(--color-muted);
+}
+
+.section-action {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.page-intro {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(36, 29, 25, .62), rgba(36, 29, 25, .62)), url("../../images/heading-lower.webp");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.page-intro > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-intro::after {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 46px;
+  height: 1px;
+  margin: 34px auto 0;
+  background: rgba(255, 255, 255, .8);
+  content: "";
+}
+
+.page-intro__title {
+  margin-top: 16px;
+  font-size: clamp(25px, 4vw, 38px);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: .1em;
+}
+
+.page-intro__text {
+  max-width: 680px;
+  margin: 28px auto 0;
+  color: rgba(255, 255, 255, .88);
+}
+
+.page-intro .en-heading,
+.page-intro .section-kicker {
+  color: rgba(255, 255, 255, .82);
+}
+
+.reservation-cta {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.reservation-cta__inner {
+  text-align: center;
+}
+
+.reservation-cta__inner > p:not(.en-heading) {
+  margin: 22px auto 32px;
+  color: var(--color-muted);
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 8px;
+  left: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  background: var(--color-ink);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-kicker {
+    font-size: 32px;
+  }
+
+  .section-heading {
+    margin-bottom: 36px;
+  }
+}

@@ -1,0 +1,48 @@
+.reset-dialog {
+  width: min(520px, calc(100% - 40px));
+  padding: 0;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: 0 24px 70px rgba(43, 33, 27, .18);
+}
+
+.reset-dialog::backdrop {
+  background: rgba(41, 39, 36, .48);
+}
+
+.reset-dialog__inner {
+  padding: clamp(28px, 5vw, 46px);
+}
+
+.reset-dialog__title {
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.reset-dialog__text {
+  margin-top: 14px;
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+.reset-dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+  .reset-dialog__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reset-dialog__actions .button {
+    min-width: 0;
+    padding-inline: 12px;
+  }
+}
