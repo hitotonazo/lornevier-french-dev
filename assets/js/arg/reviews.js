@@ -20,6 +20,10 @@
   let intervalId = 0;
   let transitionId = 0;
   let waitingForTransition = false;
+  const noise = document.createElement('span');
+  noise.className = 'review-glitch';
+  noise.setAttribute('aria-hidden', 'true');
+  text.after(noise);
 
   const render = (entry) => {
     date.dateTime = entry[0];
@@ -34,11 +38,19 @@
       render(entries[entryIndex]);
       return;
     }
+    noise.textContent = text.textContent;
+    noise.style.top = `${text.offsetTop}px`;
+    noise.style.left = `${text.offsetLeft}px`;
+    noise.style.width = `${text.offsetWidth}px`;
     card.classList.add('is-updating');
     transitionId = window.setTimeout(() => {
       render(entries[entryIndex]);
-      card.classList.remove('is-updating');
-    }, 180);
+      noise.textContent = text.textContent;
+      transitionId = window.setTimeout(() => {
+        card.classList.remove('is-updating');
+        noise.textContent = '';
+      }, 250);
+    }, 300);
   };
 
   const start = () => {
@@ -48,6 +60,8 @@
   const stop = () => {
     window.clearInterval(intervalId);
     window.clearTimeout(transitionId);
+    card.classList.remove('is-updating');
+    noise.textContent = '';
     intervalId = 0;
   };
 

@@ -14,19 +14,19 @@
   const items = {
     family: {
       figure: family,
-      source: 'images/gallery-family-abnormal.webp',
+      source: 'images/gallery-family-abnormal.webp?v=20261028-1',
       width: 1536,
       height: 1024,
-      alt: '同じ家族4人の食事風景で、父親が料理を見つめ、家族が困惑している様子',
+      alt: '同じ家族4人の食事風景で、父親が肉を勢いよく頬張り、家族が困惑している様子',
       title: 'ご家族で囲む食卓',
       details: '<p><span>撮影日時</span>2026年3月14日・ディナー</p><p><span>掲載下書き</span>掲載用写真の差し替え確認中。ご同席の方より、当日のご様子についてお問い合わせあり。</p><blockquote>「前は家族で食べるのが楽しみだったんです」</blockquote>'
     },
     couple: {
       figure: couple,
-      source: 'images/gallery-couple-abnormal.webp',
+      source: 'images/gallery-couple-abnormal.webp?v=20261028-1',
       width: 1672,
       height: 941,
-      alt: '同じ夫婦の記念日の食事風景で、妻が料理を見つめ、夫が不安そうに妻を見ている様子',
+      alt: '同じ夫婦の記念日の食事風景で、妻が身を乗り出して肉料理を食べ、夫が不安そうに見ている様子',
       title: 'お二人で過ごす記念日',
       details: '<p><span>撮影情報</span>2026年春・記念日ディナー</p><p><span>掲載確認</span>掲載写真の差し替え確認中。</p><blockquote>「次はあのソースの出るコースでお願いできませんか」</blockquote><p><span>シェフへの申し送り</span><strong>次回の特別提供、先日の記念日のお客様で調整中。</strong></p>'
     }
@@ -36,6 +36,7 @@
   let activeTrigger = null;
   let activated = false;
   let waitingForTransition = false;
+  let pendingDiscovery = false;
 
   const later = (callback, delay) => {
     const id = setTimeout(() => {
@@ -77,22 +78,8 @@
     dialogImage.alt = item.alt;
     dialogTitle.textContent = item.title;
     dialogDetails.innerHTML = item.details;
-    if (window.LornevierGame?.getPhase() !== 3) {
-      if (!dialog.open) dialog.showModal();
-      return;
-    }
-    if (waitingForTransition) return;
-    waitingForTransition = true;
-    const showAfterTransition = (event) => {
-      if (event.detail?.phase !== 3) return;
-      document.removeEventListener('lornevier:transition-complete', showAfterTransition);
-      waitingForTransition = false;
-      if (!dialog.open) dialog.showModal();
-    };
-    document.addEventListener('lornevier:transition-complete', showAfterTransition);
-    document.dispatchEvent(new CustomEvent('lornevier:anomaly-discovered', {
-      detail: { phase: 3, nextPhase: 4, source: 'gallery-anomaly-region' }
-    }));
+    if (window.LornevierGame?.getPhase() === 3 && !waitingForTransition) pendingDiscovery = true;
+    if (!dialog.open) dialog.showModal();
   };
 
   region.addEventListener('click', (event) => {
@@ -110,7 +97,15 @@
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) dialog.close();
   });
-  dialog.addEventListener('close', () => activeTrigger?.focus({ preventScroll: true }));
+  dialog.addEventListener('close', () => {
+    activeTrigger?.focus({ preventScroll: true });
+    if (!pendingDiscovery || waitingForTransition || window.LornevierGame?.getPhase() !== 3) return;
+    pendingDiscovery = false;
+    waitingForTransition = true;
+    document.dispatchEvent(new CustomEvent('lornevier:anomaly-discovered', {
+      detail: { phase: 3, nextPhase: 4, source: 'gallery-anomaly-region' }
+    }));
+  });
 
   const activate = () => {
     if (activated || window.LornevierGame?.getPhase() < 3) return;

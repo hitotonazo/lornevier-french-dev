@@ -128,6 +128,7 @@
       document.dispatchEvent(new CustomEvent('lornevier:transition-complete', {
         detail: { phase, nextPhase, advanced: read().phase >= nextPhase }
       }));
+      if (phase === 3 && read().phase >= 4) location.assign('preparation.html');
     }
   });
 

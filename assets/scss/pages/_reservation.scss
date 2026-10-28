@@ -92,34 +92,6 @@
   font-size: 14px;
 }
 
-.reservation-notice__internal {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 24px;
-  padding: 18px 24px;
-  color: #fff;
-  border: 1px solid #fff;
-  background: #0d0c0b;
-  text-align: left;
-}
-
-.reservation-notice__internal[hidden] {
-  display: none;
-}
-
-.reservation-notice__internal span {
-  color: #d74b4b;
-  font-size: 12px;
-  letter-spacing: .12em;
-}
-
-.reservation-notice__internal a {
-  color: #fff;
-  font-size: 15px;
-  text-underline-offset: 5px;
-}
-
 @media (max-width: 767px) {
   .info-section__inner,
   .access-section__inner {

@@ -7,7 +7,7 @@
   const closeButton = dialog?.querySelector('[data-arg-dialog-close]');
   if (!figure || !image || !dialog) return;
 
-  const abnormalSource = 'images/course-spring-abnormal.webp';
+  const abnormalSource = 'images/course-spring-abnormal.webp?v=20261028-2';
   const timers = new Set();
   let activated = false;
   let waitingForTransition = false;
@@ -33,7 +33,7 @@
     figure.classList.add('is-switching');
     later(() => {
       image.src = abnormalSource;
-      image.alt = 'E-7と記されたソース容器と、厨房で撮影された仔羊料理の試作写真';
+      image.alt = 'E-7と記された褐色の薬品瓶と、厨房で撮影された仔羊料理の試作写真';
       figure.classList.remove('is-switching');
       enableHotspot();
     }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 220);
