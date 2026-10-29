@@ -6,6 +6,7 @@
     version: 1,
     phase: 1,
     discovered: { phase1: false, phase2: false, phase3: false },
+    springCourseRevealed: false,
     visitedTruth: false,
     endingSeen: false
   });
@@ -28,6 +29,7 @@
         phase2: storedDiscoveries.phase2 === true || validPhase >= 3,
         phase3: storedDiscoveries.phase3 === true || validPhase >= 4
       },
+      springCourseRevealed: value.springCourseRevealed === true || validPhase >= 3,
       visitedTruth: value.visitedTruth === true,
       endingSeen: value.endingSeen === true
     };
@@ -97,6 +99,7 @@
     canAccessTruth: () => read().phase >= 4,
     markTruthVisited: () => write({ ...read(), visitedTruth: true }),
     markEndingSeen: () => write({ ...read(), phase: 4, visitedTruth: true, endingSeen: true }),
+    markSpringCourseRevealed: () => write({ ...read(), springCourseRevealed: true }),
     reset,
     debugSet
   };

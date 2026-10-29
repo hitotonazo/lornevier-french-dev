@@ -8,17 +8,9 @@
   if (!figure || !image || !dialog) return;
 
   const abnormalSource = 'images/course-spring-abnormal.webp?v=20261028-2';
-  const timers = new Set();
+  const courseTitle = document.querySelector('#past-course-title');
   let activated = false;
   let waitingForTransition = false;
-
-  const later = (callback, delay) => {
-    const id = window.setTimeout(() => {
-      timers.delete(id);
-      callback();
-    }, delay);
-    timers.add(id);
-  };
 
   const enableHotspot = () => {
     figure.classList.add('is-anomaly', 'arg-hotspot');
@@ -29,14 +21,27 @@
     figure.setAttribute('aria-label', '春の特別コースの試作写真と厨房メモを確認する');
   };
 
-  const showAbnormalImage = () => {
-    figure.classList.add('is-switching');
-    later(() => {
+  const showAbnormalImage = (immediate = false) => {
+    if (figure.classList.contains('is-revealed')) return;
+    if (immediate) {
       image.src = abnormalSource;
       image.alt = 'E-7と記された褐色の薬品瓶と、厨房で撮影された仔羊料理の試作写真';
-      figure.classList.remove('is-switching');
+      figure.classList.add('is-revealed');
       enableHotspot();
-    }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 220);
+      return;
+    }
+    const abnormalImage = document.createElement('img');
+    abnormalImage.src = abnormalSource;
+    abnormalImage.alt = 'E-7と記された褐色の薬品瓶と、厨房で撮影された仔羊料理の試作写真';
+    abnormalImage.className = 'past-course__abnormal-image';
+    abnormalImage.width = 1536;
+    abnormalImage.height = 1024;
+    figure.append(abnormalImage);
+    enableHotspot();
+    window.LornevierGame?.markSpringCourseRevealed();
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      figure.classList.add('is-revealed');
+    }));
   };
 
   const openDetails = () => {
@@ -73,15 +78,24 @@
   dialog.addEventListener('close', () => figure.focus({ preventScroll: true }));
 
   const activate = () => {
-    if (activated || window.LornevierGame?.getPhase() < 2) return;
+    if (activated || !courseTitle || window.LornevierGame?.getPhase() < 2) return;
     activated = true;
+    if (window.LornevierGame?.getState().springCourseRevealed) {
+      showAbnormalImage(true);
+      return;
+    }
     const preload = new Image();
-    preload.onload = () => later(showAbnormalImage, 700);
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) return;
+      observer.disconnect();
+      if (preload.complete && preload.naturalWidth) showAbnormalImage();
+      else preload.onload = showAbnormalImage;
+    });
+    observer.observe(courseTitle);
     preload.src = abnormalSource;
   };
 
   document.addEventListener('lornevier:phase-changed', activate);
   addEventListener('pageshow', activate);
   activate();
-  addEventListener('pagehide', () => timers.forEach((id) => clearTimeout(id)), { once: true });
 })();
